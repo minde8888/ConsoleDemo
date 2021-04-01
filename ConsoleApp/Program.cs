@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp
 {
@@ -6,8 +7,15 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
+            var shop = new Shop();
+
+            shop.Buy();
+
+            var books = new Books();
+
+            var list = "labas";
+
+            shop.GetInfo(list);
         }
     }
 }
