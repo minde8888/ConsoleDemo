@@ -1,21 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var shop = new Shop();
 
-            shop.Buy();
+            var go = true;
+            while (go)
+            {
 
-            var books = new Books();
+                string input = Console.ReadLine();
+                if (input == "List")
+                {
+                    shop.GetInfo(); 
+                }
+                else
+                {
+                    var results = input.Split(' ');
+                    var action = results[0];
+                    if (action == "stop")
+                    {
+                        go = false;
+                    }
+                    else
+                    {
+                        var name = results[1].ToLower();
 
-            var list = "labas";
+                        int a = 0;
+                        int num;
+                        foreach (var s in input.Split(' '))
+                        {
+                            if (int.TryParse(s, out num))
+                            {
+                                a = num;
+                            }
+                        }
 
-            shop.GetInfo(list);
+                        shop.Bay(name, a, action);
+
+                    }
+
+
+                }
+
+            }
         }
     }
 }

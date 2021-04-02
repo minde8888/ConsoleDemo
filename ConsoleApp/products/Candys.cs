@@ -8,6 +8,9 @@ namespace ConsoleApp
 {
     public class Candys
     {
-        
+        public void getItems ( int b, string a)
+        {
+           
+        }
     }
 }

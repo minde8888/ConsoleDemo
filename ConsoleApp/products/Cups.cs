@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class Books
+    public class Cups
     {
-
-        public void getBooks()
+        public void getItems(int b, string a)
         {
-            var book = new Items();
-            book.Books = 40;
+          
         }
-      
 
     }
 }
